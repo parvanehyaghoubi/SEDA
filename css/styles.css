@@ -1,0 +1,68 @@
+
+
+/* === Footer === */
+footer {
+    background: #004f52;
+    color: white;
+    padding: 2.5rem 8%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+footer .footer-section {
+    flex: 1 1 220px;
+}
+
+footer h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    border-bottom: 2px solid #00d4d4;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 8px 0;
+}
+
+footer ul li a {
+    color: #ccecec;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #00e0e0;
+}
+
+footer .social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+footer .social a {
+    background: #006c70;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+footer .social a:hover {
+    background: #00a0a3;
+    transform: translateY(-2px);
+}
