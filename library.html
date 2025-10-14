@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Video Library | seda</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!--==== Navbar Start ====-->
+  <nav class="navbar sticky-top navbar-expand-lg py-6 py-lg-0">
+    <div class="container px-4">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <i class="fas fa-bars p-0"></i>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close me-2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="#" style="width: 90px; margin-right: 10px;">
+          </h5>
+        </div>
+        <ul class="navbar-nav ms-lg-auto p-4 p-lg-0">
+          <li class="nav-item px-3 px-lg-1 py-lg-3">
+            <a class="nav-link" href="#Home">خانه</a>
+          </li>
+          <li class="nav-item px-3 px-lg-1 py-lg-3">
+            <a class="nav-link" href="seda video section.html">ویدیو ها</a>
+          </li>
+          <li class="nav-item px-3 px-lg-1 py-lg-3 dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">ابزار اضطراری</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" id="nav-add" href="javascript:void(0)">افزودن ویدیو +</a></li>
+              <li><a class="dropdown-item" href="#guideline">رهنما</a></li>
+              <li><a class="dropdown-item" href="#Chat-box">چت باکس</a></li>
+              <li><a class="dropdown-item" href="index.html#aboutUs">درباره ما</a></li>
+            </ul>
+          <li class="nav-item px-3 px-lg-1 py-lg-3">
+            <a class="nav-link" href="#Contact">ارتباط با ما</a>
+          </li>
+        </ul>
+      </div>
+      <a class="navbar-brand" href="#"><img src="#" style="width: 70px;"></a>
+    </div>
+  </nav>
+  <!--==== Navbar End ====-->
+  <div class="main-container m-4">
+    <div class="search-wrap">
+      <div class="search" role="search">
+        <!-- search icon -->
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M21 21l-4.35-4.35" stroke="#7a593c" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <circle cx="11" cy="11" r="6" stroke="#7a593c" stroke-width="1.6" />
+        </svg>
+        <input id="searchInput" placeholder="جستجوی ویدیوها (عنوان یا توضیحات)..." aria-label="Search videos">
+      </div>
+    </div>
+    <!--  search results -->
+    <div id="resultsGrid" class="results-grid" aria-live="polite" style="margin-top:20px"></div>
+
+    <h3 class="text-end m-5 mb-4">گالری</h3>
+    <div class="m-4">
+      <div id="libraryGrid" class="library-grid"></div>
+    </div>
+
+
+    <!-- ADD VIDEO (Admin only, bright) -->
+    <section id="addVideoSection" class="add-video text-end mt-5" aria-label="Add video">
+      <h3>افزودن ویدیو (ادمین)</h3>
+      <div class="add-row">
+        <div class="preview">
+          <div id="thumbPreview" class="upload"><small style="font-weight:400;color:#ffff;opacity:0.85">Upload the
+              video thumbnail<br>paste image URL</small></div>
+
+          <div id="videoPreview" class="upload"><small style="font-weight:400;color:#ffff;opacity:0.85"> Upload the
+              video<br>paste embed URL</small></div>
+        </div>
+        <div class="add-input">
+          <input id="inputThumb" placeholder="آدرس تصویر بندانگشتی (https://...jpg)" />
+          <input id="inputTitle" placeholder="عنوان ویدیو" />
+          <input id="inputDuration" placeholder="مدت زمان (مثلاً ۸:۳۲)" />
+          <input id="inputURL" placeholder="لینک جاسازی ویدیو (https://www.youtube.com/embed/VIDEOID)" />
+          <textarea id="inputDesc" rows="3" placeholder="توضیح کوتاه"></textarea>
+        </div>
+      </div>
+      <div style="display:flex; justify-content:flex-end;">
+        <button id="saveVideoBtn" class="save-btn mt-2 button">ذخیرهٔ ویدیو</button>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-inner" dir="ltr">
+        <div class="footer-item">
+                <span>© copyright 2025 created and designed by</span>
+                <span>runtime-rebels-web</span>
+        </div>
+    </div>
+</footer>
+
+  <script>
+
+    /* Load videos from localStorage */
+
+    function saveVideo(videos) {
+    localStorage.setItem('videoLibrary', JSON.stringify(videos));
+}
+    let videoLibrary = JSON.parse(localStorage.getItem('videoLibrary') || '[]');
+
+    const navAdd = document.getElementById('nav-add');
+    const addVideoSection = document.getElementById('addVideoSection');
+    const searchInput = document.getElementById('searchInput');
+    const resultsGrid = document.getElementById('resultsGrid');
+    const inputThumb = document.getElementById('inputThumb');
+    const inputTitle = document.getElementById('inputTitle');
+    const inputDuration = document.getElementById('inputDuration');
+    const inputURL = document.getElementById('inputURL');
+    const inputDesc = document.getElementById('inputDesc');
+    const thumbPreview = document.getElementById('thumbPreview');
+    const saveVideoBtn = document.getElementById('saveVideoBtn');
+
+    navAdd.addEventListener('click', e => { e.preventDefault(); attemptAdminOpen(); });
+
+    /* Navbar add video*/
+    function attemptAdminOpen() {
+      const user = prompt('Admin username:');
+      if (user === null) {
+        return;
+      }
+      const pass = prompt('Admin password:');
+      if (pass === null) return;
+      if (user === 'CTI' && pass === '35') {
+        addVideoSection.style.display = 'block';
+      } else {
+        alert('Sorry, the Add Video section is only open to the admin.');
+      }
+    }
+    /* Escape HTML */
+    function escapeHTML(str) { return String(str).replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m])); }
+    function shortText(s, n = 100) { return s?.length > n ? s.slice(0, n - 1) + '…' : s; }
+
+    /* Make a card */
+    function makeCard(video) {
+      const div = document.createElement('div'); div.className = 'card';
+      div.innerHTML = `<img src="${escapeHTML(video.thumbnail)}" alt="${escapeHTML(video.title)}">
+    <div class="info text-end">
+      <h3 class="text-end">${escapeHTML(video.title)}</h3>
+      <div class="dur text-end">${escapeHTML(video.duration)}</div>
+      <p class="text-end">${escapeHTML(shortText(video.description, 100))}</p>
+    </div>`;
+      div.addEventListener('click', () => {
+        localStorage.setItem('currentVideo', JSON.stringify(video));
+        window.location.href = 'seda video section.html';
+      });
+      return div;
+    }
+
+    /* ---------- Video preview ---------- */
+    inputURL.addEventListener('input', () => {
+      const v = inputURL.value.trim();
+      if (v) {
+        // Check if it's a full YouTube URL and convert to embed if needed
+        let embedURL = v;
+        if (v.includes('youtube.com/watch?v=')) {
+          const videoId = v.split('v=')[1].split('&')[0];
+          embedURL = `${v.embed}`;
+        }
+
+        videoPreview.innerHTML = `
+      <iframe src="${embedURL}" allowfullscreen></iframe>
+    `;
+      } else {
+        videoPreview.innerHTML = `
+      <small style="font-weight:400;color:#ffff;opacity:0.85">
+        Upload the video<br>paste embed URL
+      </small>
+    `;
+      }
+    });
+
+
+    /* ---------- Thumbnail preview ---------- */
+    inputThumb.addEventListener('input', () => {
+      const v = inputThumb.value.trim();
+      if (v) {
+        thumbPreview.style.backgroundImage = `url(${v})`;
+        thumbPreview.style.backgroundSize = 'cover';
+        thumbPreview.style.backgroundPosition = 'center';
+        thumbPreview.textContent = '';
+      } else {
+        thumbPreview.style.backgroundImage = 'none';
+        thumbPreview.textContent = 'paste the thumbnail URL'
+        thumbPreview.style.fontSize = '14px'
+      }
+    });
+
+    /* ---------- Save video ---------- */
+
+    saveVideoBtn.addEventListener('click', () => {
+      const thumb = inputThumb.value.trim();
+      const title = inputTitle.value.trim();
+      const duration = inputDuration.value.trim();
+      const url = inputURL.value.trim();
+      const desc = inputDesc.value.trim();
+
+      if (!thumb || !title || !duration || !url) {
+        alert('Please fill thumbnail, title, duration and embed URL.');
+        return;
+      }
+
+      const id = 'v' + Date.now();
+      const newVideo = { id, title, duration, description: desc || '', thumbnail: thumb, embed: url };
+      videoLibrary.unshift(newVideo);
+      saveVideo(videoLibrary);
+
+      inputThumb.value = ''; inputTitle.value = ''; inputDuration.value = ''; inputURL.value = ''; inputDesc.value = '';
+      thumbPreview.style.backgroundImage = 'none';
+      thumbPreview.textContent = 'Upload the video thumbnail\npaste image URL';
+      videoPreview.style.backgroundImage = 'none';
+      videoPreview.textContent = 'Upload the video UTL\npaste image URL';
+
+      renderLibrary(false);
+      alert('Video saved to library.');
+      scrollTo('librarySection');
+    });
+
+    /* Render all videos */
+    function renderLibrary(showAll = false) {
+    if (!libraryGrid) return; // skip if libraryGrid not on this page
+    libraryGrid.innerHTML = '';
+    const items = showAll ? videoLibrary : videoLibrary.slice(0, 4);
+    items.forEach(v => libraryGrid.appendChild(makeCard(v)));
+}
+
+    const libraryGrid = document.getElementById('libraryGrid');
+    libraryGrid.innerHTML = '';
+    videoLibrary.forEach(v => libraryGrid.appendChild(makeCard(v)));
+
+    /* ---------- SEARCH ---------- */
+    function normalizeWords(s) {
+      return s.toLowerCase().split(/\s+/).map(x => x.trim()).filter(Boolean);
+    }
+    function searchVideos(query) {
+      if (!query) return videoLibrary.slice();
+      const qWords = normalizeWords(query);
+      return videoLibrary.filter(v => {
+        const combined = (v.title + ' ' + v.description).toLowerCase();
+        return qWords.every(qw => combined.includes(qw));
+      });
+    }
+    function showResults(list) {
+      resultsGrid.innerHTML = '';
+      resultsGrid.style.display = 'flex'
+      resultsGrid.style.justifyContent = 'center'
+      resultsGrid.style.gap = '14px'
+      list.forEach(v => resultsGrid.appendChild(makeCard(v)));
+    }
+    searchInput.addEventListener('input', e => {
+      const q = e.target.value.trim();
+      showResults(searchVideos(q));
+    });
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
