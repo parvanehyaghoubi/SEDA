@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +11,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/video-style.css">
     <title>Seda | Video-section</title>
 </head>
+
 <body>
     <!--==== Navbar Start ====-->
     <nav class="navbar sticky-top navbar-expand-lg py-6 py-lg-0">
@@ -32,7 +34,7 @@
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="#"
                             style="width: 90px; margin-right: 10px;"></h5>
                 </div>
-                <ul class="navbar-nav ms-lg-auto p-4 p-lg-0"  dir="rtl">
+                <ul class="navbar-nav ms-lg-auto p-4 p-lg-0" dir="rtl">
                     <li class="nav-item px-3 px-lg-1 py-lg-3">
                         <a class="nav-link" id="nav-home" href="#Home">خانه</a>
                     </li>
@@ -45,7 +47,8 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" id="nav-library-link" href="#video-library">لیست ویدیو ها</a>
                             </li>
-                            <li> <a class="dropdown-item" id="nav-add" class="add-link" href="javascript:void(0)">افزودن ویدیو</a></li>
+                            <li> <a class="dropdown-item" id="nav-add" class="add-link" href="javascript:void(0)">افزودن
+                                    ویدیو</a></li>
                             <li><a class="dropdown-item" href="#guidance">رهنمایی</a></li>
                             <li><a class="dropdown-item" href="#Chat-box">چت باکس</a></li>
                             <li><a class="dropdown-item" href="#Q&A">سوال و جواب</a></li>
@@ -62,7 +65,7 @@
 
     <!--==== Main Container Start ====-->
     <div class="main-container">
-    <!-- PLAY SECTION START -->
+        <!-- PLAY SECTION START -->
         <section id="playSection" class="section play-section" aria-label="Play section">
             <div class="search-wrap">
                 <div class="search" role="search">
@@ -79,7 +82,8 @@
 
             <div class="player-panel">
                 <div id="playerWrapper" class="player-wrapper" aria-live="polite">
-                    <div id="playerEmpty" class="player-empty">جستجو کنید یا روی یک ویدیو کلیک کنید تا اینجا پخش شود.</div>
+                    <div id="playerEmpty" class="player-empty">جستجو کنید یا روی یک ویدیو کلیک کنید تا اینجا پخش شود.
+                    </div>
                 </div>
 
                 <div class="video-info text-end">
@@ -97,9 +101,41 @@
             <div id="resultsGrid" class="results-grid" aria-live="polite" style="margin-top:20px"></div>
         </section>
 
-    <!-- PLAY SECTION END -->
+        <!-- PLAY SECTION END -->
     </div>
     <!--==== Main Container End ====-->
+
+    <!--=== Footer Strat ===-->
+    <footer id="Contact">
+        <div class="row">
+            <div class="col-md-4 footer-section">
+                <h4>درباره صد‌ا</h4>
+                <p>اپلیکیشن Seda جهت توانمندسازی زنان از طریق آموزش، پشتیبانی و دسترسی به منابع اضطراری طراحی شده است.
+                </p>
+            </div>
+            <div class="col-md-4 footer-section">
+                <h4>خدمات</h4>
+                <ul>
+                    <li><a href="#">آموزش‌ها</a></li>
+                    <li><a href="#">ویدیوها</a></li>
+                    <li><a href="#">ابزارها</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 footer-section">
+                <h4>پشتیبانی</h4>
+                <div class="social">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="mailto:example@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Seda App — تمامی حقوق محفوظ است.
+        </div>
+    </footer>
+    <!--=== Footer End ===-->
 
     <script>
         let videoLibrary = [
@@ -226,7 +262,7 @@
 
             // update info
             playerTitle.textContent = video.title;
-            playerMeta.textContent = 'مدت' + ' ' + video.duration ;
+            playerMeta.textContent = 'مدت' + ' ' + video.duration;
             playerDesc.textContent = video.description;
 
             // no search action required — update suggested (move played video to front)
@@ -251,4 +287,5 @@
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
