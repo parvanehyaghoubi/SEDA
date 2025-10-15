@@ -452,77 +452,6 @@ h3 {
     font-size: 0.95rem;
 }
 
-/* === Footer === */
-.footer {
-    background: var(--color-5);
-    color: white;
-    padding: 2.5rem 8%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-}
-
-.footer .footer-section {
-    flex: 1 1 220px;
-}
-
-.footer h4 {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    border-bottom: 2px solid #675545;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-.footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer ul li {
-    margin: 8px 0;
-}
-
-.footer ul li a {
-    color: var(--color-8);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 18px;
-}
-
-.footer ul li a:hover {
-    color: #7a593c;
-}
-
-.footer .icon a {
-    color: white;
-    text-decoration: none;
-}
-
-.icon {
-    display: flex;
-    transition: all 0.3s ease;
-}
-
-.icon i {
-    font-size: 26px;
-    color: #fff;
-    cursor: pointer;
-    /* adjust for your theme */
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.icon h3 {
-    opacity: 0;
-    transform: translateY(10px);
-    color: #fff;
-    /* adjust text color */
-    font-size: 16px;
-    transition: all 0.4s ease;
-}
-
 /* Hover Effects */
 .icon:hover h3 {
     opacity: 1;
@@ -535,25 +464,6 @@ h3 {
     /* pink/purple hover color */
 }
 
-
-/*LIBRARY FOOTER*/
-.footer-inner{
-    position: relative;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    text-align: center;
-    top: 40px;
-}
-.footer-inner .footer-item{
-    flex: 0 0 100%;
-    max-width: 100%;
-    font-size: 16px;
-    font-family: 'poppins';
-    color: rgb(91, 91, 91);
-    display: block;
-    margin: 0px;
-}
 
 /* RESPONSIVENESS CODE*/
 @media (max-width:1100px) {

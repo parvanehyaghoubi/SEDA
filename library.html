@@ -10,12 +10,11 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/video-style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -104,22 +103,47 @@
     </section>
   </div>
 
-  <footer>
-    <div class="footer-inner" dir="ltr">
-        <div class="footer-item">
-                <span>© copyright 2025 created and designed by</span>
-                <span>runtime-rebels-web</span>
+
+  <!--=== Footer Strat ===-->
+  <footer id="Contact">
+    <div class="row">
+      <div class="col-md-4 footer-section">
+        <h4>درباره صد‌ا</h4>
+        <p>اپلیکیشن Seda جهت توانمندسازی زنان از طریق آموزش، پشتیبانی و دسترسی به منابع اضطراری طراحی شده است.</p>
+      </div>
+      <div class="col-md-4 footer-section">
+        <h4>خدمات</h4>
+        <ul>
+          <li><a href="#">آموزش‌ها</a></li>
+          <li><a href="#">ویدیوها</a></li>
+          <li><a href="#">ابزارها</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 footer-section">
+        <h4>پشتیبانی</h4>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+          <a href="mailto:example@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
         </div>
+      </div>
     </div>
-</footer>
+    <div class="footer-bottom">
+      © 2025 Seda App — تمامی حقوق محفوظ است.
+    </div>
+  </footer>
+  <!--=== Footer End ===-->
+
+
 
   <script>
 
     /* Load videos from localStorage */
 
     function saveVideo(videos) {
-    localStorage.setItem('videoLibrary', JSON.stringify(videos));
-}
+      localStorage.setItem('videoLibrary', JSON.stringify(videos));
+    }
     let videoLibrary = JSON.parse(localStorage.getItem('videoLibrary') || '[]');
 
     const navAdd = document.getElementById('nav-add');
@@ -241,11 +265,11 @@
 
     /* Render all videos */
     function renderLibrary(showAll = false) {
-    if (!libraryGrid) return; // skip if libraryGrid not on this page
-    libraryGrid.innerHTML = '';
-    const items = showAll ? videoLibrary : videoLibrary.slice(0, 4);
-    items.forEach(v => libraryGrid.appendChild(makeCard(v)));
-}
+      if (!libraryGrid) return; // skip if libraryGrid not on this page
+      libraryGrid.innerHTML = '';
+      const items = showAll ? videoLibrary : videoLibrary.slice(0, 4);
+      items.forEach(v => libraryGrid.appendChild(makeCard(v)));
+    }
 
     const libraryGrid = document.getElementById('libraryGrid');
     libraryGrid.innerHTML = '';
