@@ -1,25 +1,11 @@
-:root {
-    --color-1: #f1eae2;
-    --color-2: #a6aa92;
-    --color-4:#7a593c;
-    --color-5: #73826b;
-    --color-7:#9b8775;
-    --color-8:#ffffff;
-    --color-9: #bcab91;
-    --text: #5d6953;
-    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-    --glass: rgba(255, 255, 255, 0.55);
-    --light-bg: #ced2c4;
-}
-
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Vazirmatn';
-    background: var(--color-1);
+    background: var(--color-2);
     min-height: 100vh;
-    color: #000;
+    color: var(--text);
     line-height: 1.6;
 
 }
@@ -42,7 +28,7 @@ body {
 }
 
 .navbar-nav .nav-item .nav-link {
-    color: var(--color-1);
+    color: var(--color-2);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.9rem;
@@ -73,11 +59,11 @@ body {
 .dropdown-menu .dropdown-item:hover {
     background: rgba(255, 255, 255, 0.15);
     border-color: rgba(2, 3, 3, 0.3);
-    color: #0d0d0d;
+    color: var(--text);
 }
 
 .dropdown-menu .dropdown-item {
-    color: var(--color-1);
+    color: var(--color-2);
     transition: all 0.4s ease;
 }
 
@@ -86,13 +72,12 @@ body {
     backdrop-filter: blur(20px);
     max-width: 80%;
 }
-
 /*Navbar End*/
 
 /* Main Container */
 
 h3 {
-    color: var(--color-4);
+    color: var(--text);
     margin-bottom: 30px;
     margin-right: 1rem;
 }
@@ -147,7 +132,7 @@ h3 {
     outline: none;
     background: transparent;
     font-size: 1rem;
-    color: #043737;
+    color: var(--text);
     width: 100%;
 }
 
@@ -164,7 +149,7 @@ h3 {
     height: 140px;
     border-radius: 12px;
     overflow: hidden;
-    border: #628e8d 2px dashed;
+    border: var(--color-4) 2px dashed;
     background: transparent;
     display: flex;
     align-items: center;
@@ -253,7 +238,7 @@ h3 {
 }
 
 .suggested-row::-webkit-scrollbar-thumb {
-    background: var(--color-7);
+    background: linear-gradient(150deg, var(--color-1), var(--color-3), var(--color-4));
     border-radius: 5px;
 }
 
@@ -262,8 +247,7 @@ h3 {
     max-width: 220px;
     border-radius: 12px;
     overflow: hidden;
-    background: var(--light-bg);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    background: var(--color-1);
     cursor: pointer;
     transition: transform .18s ease;
 }
@@ -307,7 +291,7 @@ h3 {
 
 /* LIBRARY */
 .card {
-    background: var(--light-bg);
+    background: var(--color-1);
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
@@ -376,19 +360,20 @@ h3 {
     position: relative;
     padding: 12px 18px;
     margin-bottom: 2rem;
-    background: var(--color-7);
+    background: var(--color-2);
     font-size: 16px;
     font-weight: 400;
-    color: #fff;
-    box-shadow: 0px 0px 5px 0px var(--color-7);
+    color: var(--text);
+    border: 2px double var(--color-3);
     border-radius: 100px;
-    border: none;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
 
 .button:hover{
     background: var(--color-4);
+    border:  2px double var(--color-4);
+    color: var(--color-2);
     transform: translateY(-2px);
 }
 
@@ -415,7 +400,7 @@ h3 {
     width: 200px;
     height: 150px;
     border-radius: 10px;
-    background: var(--color-9);
+    background: var(--color-6);
     border: 2px dashed rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
@@ -452,6 +437,77 @@ h3 {
     font-size: 0.95rem;
 }
 
+/* === Footer === */
+.footer {
+    background: var(--color-5);
+    color: white;
+    padding: 2.5rem 8%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.footer .footer-section {
+    flex: 1 1 220px;
+}
+
+.footer h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--color-3);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 8px 0;
+}
+
+.footer ul li a {
+    color: var(--color-2);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 18px;
+}
+
+.footer ul li a:hover {
+    color: var(--text);
+}
+
+.footer .icon a {
+    color: white;
+    text-decoration: none;
+}
+
+.icon {
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.icon i {
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+    /* adjust for your theme */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon h3 {
+    opacity: 0;
+    transform: translateY(10px);
+    color: #fff;
+    /* adjust text color */
+    font-size: 16px;
+    transition: all 0.4s ease;
+}
+
 /* Hover Effects */
 .icon:hover h3 {
     opacity: 1;
@@ -460,10 +516,38 @@ h3 {
 
 .icon:hover i {
     transform: scale(1.2);
-    color: var(--color-4);
+    color: var(--text);
     /* pink/purple hover color */
 }
 
+.footer-bottom {
+    flex: 0 0 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+}
+
+
+/*LIBRARY FOOTER*/
+.footer-inner{
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+    top: 40px;
+}
+.footer-inner .footer-item{
+    flex: 0 0 100%;
+    max-width: 100%;
+    font-size: 16px;
+    font-family: 'poppins';
+    color: rgb(91, 91, 91);
+    display: block;
+    margin: 0px;
+}
 
 /* RESPONSIVENESS CODE*/
 @media (max-width:1100px) {
