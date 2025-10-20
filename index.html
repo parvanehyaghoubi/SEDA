@@ -24,75 +24,83 @@
                 <div class="offcanvas-header">
                     <button type="button" class="btn-close me-2" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="seda-lg.png"
-                            style="width: 70px; margin-right: 10px;">
-                    </h5>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="#"
+                            style="width: 90px; margin-right: 10px;"></h5>
                 </div>
-                <ul class="navbar-nav ms-lg-auto p-4 p-lg-0">
+                <ul class="navbar-nav ms-lg-auto p-4 p-lg-0"  dir="rtl">
                     <li class="nav-item px-3 px-lg-1 py-lg-3">
-                        <a class="nav-link" href="index.html">خانه</a>
+                        <a class="nav-link" id="nav-home" href="#Home">خانه</a>
                     </li>
                     <li class="nav-item px-3 px-lg-1 py-lg-3">
-                        <a class="nav-link" href="seda video section.html">ویدیو ها</a>
+                        <a class="nav-link" id="nav-play" href="video-section.html">ویدیو ها</a>
                     </li>
                     <li class="nav-item px-3 px-lg-1 py-lg-3 dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">ابزار اضطراری</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="docs.html">مطالب</a></li>
-                            <li><a class="dropdown-item" href="#">چت باکس</a></li>
-                            <li><a class="dropdown-item" href="index.html#aboutUs">درباره ما</a></li>
+                            <li><a class="dropdown-item" href="#Chat-box">چت باکس</a></li>
+                            <li><a class="dropdown-item" href="#index.html#aboutUs">درباره ما</a></li>
                         </ul>
                     <li class="nav-item px-3 px-lg-1 py-lg-3">
-                        <a class="nav-link" href="#Contact">ارتباط با ما</a>
+                        <a class="nav-link" href="contact.html">ارتباط با ما</a>
                     </li>
                 </ul>
             </div>
-            <a class="navbar-brand" href="index.html"><img src="seda-lg.png" style="width: 70px;"></a>
+            <a class="navbar-brand" href="#"><img src="assets/seda-lg.png" style="width: 70px;"></a>
         </div>
     </nav>
     <!--==== Navbar End ====-->
 
-    <!--=== Hero Section Strat ===-->
-    <section class="hero" id="home">
-        <div class="hero-text">
+    <!--=== Hero Section Start ===-->
+
+    <section id="home">
+        <div style="position: relative; background: var(--color-5); min-height: 100vh;">
+            <div class="hero">
+            <div class="hero-content">
             <h1>اپلیکیشن صدا — صدای امن و قابل اعتماد برای زنان</h1>
             <p>با Seda می‌توانید در شرایط بحرانی به سرعت به منابع حمایتی، آموزش‌ها و راهکارهای اضطراری دسترسی پیدا کنید.
                 پلتفرمی برای امنیت، آگاهی و آرامش.</p>
-            <div class="hero-buttons">
-                <button class="btn" onclick="location.href='#videos'">شروع به یادگیری</button>
-                <button class="btn" onclick="location.href='#faq'">پرسش و پاسخ</button>
-            </div>
+            <button class="btn" onclick="location.href='video-section.html'">شروع به یادگیری</button>
+            <button class="btn" onclick="location.href='docs.html'">مطالب</button>
         </div>
-        <div class="hero-image" style="flex:1; min-width:300px; display:flex; justify-content:center; align-items:center;">
-            <img src="assets/logo.jpg" alt="زن با حجاب و تکنولوژی"
-                style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.1);">
+        <div class="hero-img">
+            <img src="assets/img-3-01.png" alt="زن با حجاب و تکنولوژی">
+        </div>
+            </div>
+            <div class="custom-shape-divider-bottom-1760952885">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".35" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".2" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
         </div>
     </section>
     <!--=== Hero Section End ===-->
 
     <!--=== Cards Section Strat ===-->
     <section class="cards">
-        <div class="card-item" onclick="location.href='#videos'">
-            <img src="https://cdn-icons-png.flaticon.com/512/2920/2920329.png" alt="Videos">
+        <div class="card-item" onclick="location.href='video-section.html'">
+            <i class="fa-solid fa-video"></i>
             <h3>ویدیوهای آموزشی</h3>
             <p>دسترسی به محتوای آموزشی و ویدیوهای کاربردی برای موقعیت‌های مختلف.</p>
         </div>
     
-        <div class="card-item" onclick="location.href='#chat'">
-            <img src="https://cdn-icons-png.flaticon.com/512/3845/3845764.png" alt="Chatbot">
+        <div class="card-item" onclick="location.href='#chatbox'">
+            <i class="fa-solid fa-comment-dots"></i>
             <h3>چت‌بات حمایتی</h3>
             <p>دریافت مشاوره سریع از چت‌بات هوشمند Seda برای راهنمایی و پشتیبانی.</p>
         </div>
     
-        <div class="card-item" onclick="location.href='#faq'">
-            <img src="https://cdn-icons-png.flaticon.com/512/3405/3405244.png" alt="FAQ">
-            <h3>پرسش و پاسخ</h3>
-            <p>سوالات متداول و پاسخ‌های مفید درباره امنیت، آموزش و پشتیبانی.</p>
+        <div class="card-item" onclick="location.href='docs.html'">
+            <i class="fa-solid fa-folder-open"></i>
+            <h3>مستندات امنیت سایبری</h3>
+            <p>مجموعه‌ای کامل از اطلاعات، مفاهیم، و راهنمایی‌های مربوط به امنیت سایبری در یک بخش گردآوری شده است.</p>
         </div>
     
-        <div class="card-item" onclick="location.href='#contact'">
-            <img src="https://cdn-icons-png.flaticon.com/512/3059/3059449.png" alt="Contact">
+        <div class="card-item" onclick="location.href='contact.html'">
+            <i class="fa-solid fa-phone-flip"></i>
             <h3>ارتباط با ما</h3>
             <p>پیشنهادات، نظرات و درخواست‌های خود را مستقیماً با تیم Seda در میان بگذارید.</p>
         </div>
@@ -110,7 +118,8 @@
         </button>
     </div>
 
-        <!-- Footer -->
+    <!--=== Footer Strat ===-->
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-section">
             <h4>درباره‌ی Seda</h4>
@@ -120,35 +129,43 @@
         <div class="footer-section">
             <h4>لینک‌های مفید</h4>
             <ul>
-                <li><a href="#">خانه</a></li>
-                <li><a href="#">ویدیوها</a></li>
-                <li><a href="#">رهنما</a></li>
-                <li><a href="#"> ارتباط با ما</a></li>
+                <li><a href="index.html">خانه</a></li>
+                <li><a href="video-section.html">ویدیوها</a></li>
+                <li><a href="docs.html">مطالب</a></li>
+                <li><a href="contact.html"> ارتباط با ما</a></li>
             </ul>
         </div>
         <div class="footer-section">
             <h4>ما را دنبال کنید</h4>
+
                     <div class="icon">
                         <i class="fa fa-envelope"></i>
                         <a href="#"><h3>ایمیل</h3></a>
                     </div>
+                    
                     <div class="icon">
-                        <i class="fa fa-github-alt"></i>
+                        <i class="fa-brands fa-github-alt"></i>
                         <a href="#"><h3>گیت‌هاب</h3></a>
                     </div>
+                    
                     <div class="icon">
-                        <i class="fa fa-twitter"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
                         <a href="#"><h3>توییتر</h3></a>
                     </div>
+
                     <div class="icon">
-                        <i class="fa fa-facebook"></i>
+                        <i class="fa-brands fa-facebook"></i>
                         <a href="#"><h3>فیسبوک</h3></a>
                     </div>
+                    
+
         </div>
+
         <div class="footer-bottom">
             © 2025 Seda App — تمامی حقوق محفوظ است.
         </div>
     </footer>
+    <!--=== Footer End ===-->
 
     <!--=== Popup Modal ===-->
     <div class="popup-modal" id="popupModal">
@@ -174,5 +191,4 @@
         crossorigin="anonymous"></script>
         
 </body>
-
 </html>

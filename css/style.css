@@ -1,3 +1,13 @@
+:root {
+    --color-1: #c3e2df;
+    --color-2: #ffffff;
+    --color-3: #eccbe1;
+    --color-4: #9d7d9d;
+    --color-5: #5a8897;
+    --color-6: #cddcdc;
+    --text: #393945;
+}
+
 body {
     box-sizing: border-box;
     margin: 0;
@@ -5,7 +15,7 @@ body {
     font-family: 'Vazirmatn', sans-serif;
     background: var(--color-2);
     min-height: 100vh;
-    color: var(--text);
+    color: #000;
     line-height: 1.6;
 
 }
@@ -17,7 +27,6 @@ body {
     left: 0;
     right: 0;
     background: var(--color-5);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     direction: rtl;
     text-align: right;
@@ -59,7 +68,7 @@ body {
 .dropdown-menu .dropdown-item:hover {
     background: rgba(255, 255, 255, 0.15);
     border-color: rgba(2, 3, 3, 0.3);
-    color: var(--text);
+    color: #0d0d0d;
 }
 
 .dropdown-menu .dropdown-item {
@@ -76,49 +85,98 @@ body {
 /*Navbar End*/
 
 /*=== Hero Section ===*/
+
 .hero {
+    max-width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding: 7rem 2rem 4rem;
-    background: linear-gradient(135deg, var(--color-1) 60%, var(--color-9) 100%);
-    color: var(--text);
+    justify-content: space-between;
+    padding: 20vh;
 }
 
-.hero-text {
+.hero-content {
     flex: 1;
-    max-width: 500px;
+    max-width: 50%;
+    padding: 10vh;
 }
 
-.hero-text h1 {
-    color: var(--text);
+.hero-img {
+    flex: 1;
+    max-width: 50%;
+}
+
+.hero-img img {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.hero-content h1 {
+    color: var(--color-2);
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
-.hero-text p {
-    color: var(--text);
+.hero-content p {
+    color: var(--color-2);
     font-size: 1rem;
     margin-bottom: 2rem;
 }
 
-.hero-buttons .btn {
-    border: 2px double var(--color-3);
-    background: var(--color-2);
-    color: var(--text);
+.hero-content .btn {
+    background: var(--color-4);
+    color: var(--color-2);
+    border: none;
     border-radius: 25px;
     padding: 0.6rem 1.5rem;
     margin-left: 0.5rem;
     transition: 0.3s;
 }
 
-.hero-buttons .btn:hover {
-    background: var(--color-4);
-    color: var(--color-2);
-    border: 2px double var(--color-4)
+.hero-content .btn:hover {
+    background: var(--color-3);
+    color: var(--text);
+}
+
+/*background wave*/
+
+.custom-shape-divider-bottom-1760952885 {
+    position: absolute;
+    direction: ltr;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1760952885 svg {
+    position: relative;
+    display: block;
+    width: calc(180% + 1.3px);
+    height: 153px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1760952885 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-bottom-1760952885 svg {
+        width: calc(133% + 1.3px);
+        height: 183px;
+    }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1760952885 svg {
+        width: calc(190% + 1.3px);
+        height: 180px;
+    }
 }
 
 /*=== Cards Section ===*/
@@ -127,13 +185,10 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 2rem;
     padding: 4rem 2rem;
-    background: var(--color-1);
     text-align: center;
 }
 
 .card-item {
-    background: var(--color-6);
-    border-radius: 20px;
     padding: 2rem 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -143,9 +198,10 @@ body {
     transform: translateY(-8px);
 }
 
-.card-item img {
-    width: 80px;
+.card-item i {
+    font-size: 50px;
     margin-bottom: 1rem;
+    color: var(--color-4);
 }
 
 .card-item h3 {
@@ -155,27 +211,25 @@ body {
 }
 
 .card-item p {
-    color: var(--color-3);
+    color: var(--text);
     font-size: 0.9rem;
 }
 
 /*=== App Download Section ===*/
 .app-download {
     text-align: center;
-    background: var(--color-2);
     padding: 3rem 1rem;
 }
 
 .app-download h3 {
-    color: var(--color-3);
+    color: var(--color-4);
     margin-bottom: 1.5rem;
     font-weight: 600;
 }
 
 .app-download .btn {
-    background: var(--color-6);
-    color: var(--text);
-    border: 2px double var(--color-6);
+    background: var(--text);
+    color: var(--color-2);
     border-radius: 30px;
     padding: 0.6rem 1.3rem;
     margin: 0.3rem;
@@ -183,8 +237,8 @@ body {
 }
 
 .app-download .btn:hover {
-    background: var(--color-5);
-    border: 2px double var(--color-5)
+    background: var(--color-6);
+    color: var(--text);
 }
 
 /* === Footer === */
@@ -242,10 +296,10 @@ body {
 }
 
 .icon i {
+    padding: 5px;
     font-size: 26px;
     color: #fff;
     cursor: pointer;
-    /* adjust for your theme */
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -257,7 +311,6 @@ body {
     transition: all 0.4s ease;
 }
 
-/* Hover Effects */
 .icon:hover h3 {
     opacity: 1;
     transform: translateY(0);
@@ -266,6 +319,15 @@ body {
 .icon:hover i {
     transform: scale(1.2);
     color: var(--text);
+}
+
+.footer-bottom {
+    flex: 0 0 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    font-size: 0.85rem;
 }
 
 
@@ -280,37 +342,135 @@ body {
     align-items: center;
 }
 
+/* Popup content */
 .popup-content {
-    background: var(--color-3);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
     padding: 2rem;
     border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 90%;
     max-width: 400px;
-    color: var(--text);
+    animation: popupFadeIn 0.4s ease;
 }
 
+/* Title */
 .popup-content h2 {
     margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--color-2);
 }
 
+/* Paragraph */
+.popup-content p {
+    color: var(--color-2);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons */
 .popup-content .btn {
-    margin: 0.5rem;
-    border-radius: 25px;
+    background: #f3f3f3;
+    border: none;
+    border-radius: 12px;
+    padding: 0.7rem 1.2rem;
+    margin: 0.3rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.popup-content .btn:hover {
+    background: #e2e2e2;
+}
+
+/* Primary button */
+.popup-content .btn-primary {
+    background: #5a8897;
+    color: #fff;
+}
+
+.popup-content .btn-primary:hover {
+    background: #4d7683;
+}
+
+/* Icons */
+.popup-content i {
+    margin-right: 6px;
+}
+
+/* Fade animation */
+@keyframes popupFadeIn {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /*=== Responsive ===*/
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+
     .hero {
-        flex-direction: column;
-        padding: 6rem 1rem 3rem;
+        max-width: 100%;
+        min-height: 100vh;
+        padding: 10vh;
     }
 
-    .hero-text {
-        text-align: center;
+    .hero-content {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .hero-img {
+        flex: 1;
+        max-width: 50%;
+        position: relative;
+        height: 300px;
+    }
+
+    .hero-img img {
+        max-width: 100%;
+        padding-top: 10vh;
+    }
+
+    .hero-content button {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 968px) {
+    .hero {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 15vh 10vh;
+    }
+
+    .hero-content {
+        flex: 1;
+        max-width: 100%;
+        padding: 0vh;
+    }
+
+    .hero-content button {
+        margin: 5px;
+    }
+
+    .hero-img img {
+        display: none;
     }
 
     .navbar {
         max-height: none;
+    }
+
+    .card-item {
+        border: 1px double var(--color-5);
+        border-radius: 15px;
     }
 }
