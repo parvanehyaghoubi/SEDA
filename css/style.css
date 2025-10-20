@@ -1,25 +1,11 @@
-:root {
-    --color-1: #f1eae2;
-    --color-2: #a6aa92;
-    --color-4:#7a593c;
-    --color-5: #73826b;
-    --color-7:#9b8775;
-    --color-8:#ffffff;
-    --color-9: #bcab91;
-    --text: #5d6953;
-    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-    --glass: rgba(255, 255, 255, 0.55);
-    --light-bg: #ced2c4;
-}
-
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Vazirmatn', sans-serif;
-    background: var(--color-1);
+    background: var(--color-2);
     min-height: 100vh;
-    color: #000;
+    color: var(--text);
     line-height: 1.6;
 
 }
@@ -42,7 +28,7 @@ body {
 }
 
 .navbar-nav .nav-item .nav-link {
-    color: var(--color-1);
+    color: var(--color-2);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.9rem;
@@ -73,11 +59,11 @@ body {
 .dropdown-menu .dropdown-item:hover {
     background: rgba(255, 255, 255, 0.15);
     border-color: rgba(2, 3, 3, 0.3);
-    color: #0d0d0d;
+    color: var(--text);
 }
 
 .dropdown-menu .dropdown-item {
-    color: var(--color-1);
+    color: var(--color-2);
     transition: all 0.4s ease;
 }
 
@@ -107,7 +93,7 @@ body {
 }
 
 .hero-text h1 {
-    color: var(--color-4);
+    color: var(--text);
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -120,9 +106,9 @@ body {
 }
 
 .hero-buttons .btn {
-    background: var(--color-4);
-    color: var(--color-8);
-    border: none;
+    border: 2px double var(--color-3);
+    background: var(--color-2);
+    color: var(--text);
     border-radius: 25px;
     padding: 0.6rem 1.5rem;
     margin-left: 0.5rem;
@@ -130,7 +116,9 @@ body {
 }
 
 .hero-buttons .btn:hover {
-    background: var(--color-5);
+    background: var(--color-4);
+    color: var(--color-2);
+    border: 2px double var(--color-4)
 }
 
 /*=== Cards Section ===*/
@@ -144,8 +132,7 @@ body {
 }
 
 .card-item {
-    background: var(--color-8);
-    box-shadow: var(--card-shadow);
+    background: var(--color-6);
     border-radius: 20px;
     padding: 2rem 1rem;
     cursor: pointer;
@@ -154,7 +141,6 @@ body {
 
 .card-item:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
 .card-item img {
@@ -169,26 +155,27 @@ body {
 }
 
 .card-item p {
-    color: var(--text);
+    color: var(--color-3);
     font-size: 0.9rem;
 }
 
 /*=== App Download Section ===*/
 .app-download {
     text-align: center;
-    background: var(--light-bg);
+    background: var(--color-2);
     padding: 3rem 1rem;
 }
 
 .app-download h3 {
-    color: var(--color-4);
+    color: var(--color-3);
     margin-bottom: 1.5rem;
     font-weight: 600;
 }
 
 .app-download .btn {
-    background: var(--color-5);
-    color: var(--color-8);
+    background: var(--color-6);
+    color: var(--text);
+    border: 2px double var(--color-6);
     border-radius: 30px;
     padding: 0.6rem 1.3rem;
     margin: 0.3rem;
@@ -196,60 +183,91 @@ body {
 }
 
 .app-download .btn:hover {
-    background: var(--color-7);
-}
-
-/*=== Footer ===*/
-footer {
     background: var(--color-5);
-    color: var(--color-1);
-    padding: 3rem 1rem 1rem;
-    font-size: 0.9rem;
+    border: 2px double var(--color-5)
 }
 
-footer h4 {
-    color: var(--color-8);
+/* === Footer === */
+.footer {
+    background: var(--color-5);
+    color: white;
+    padding: 2.5rem 8%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.footer .footer-section {
+    flex: 1 1 220px;
+}
+
+.footer h4 {
     margin-bottom: 1rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--color-3);
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
-.footer-section ul {
+.footer ul {
     list-style: none;
     padding: 0;
 }
 
-.footer-section ul li {
-    margin-bottom: 0.5rem;
+.footer ul li {
+    margin: 8px 0;
 }
 
-.footer-section a {
-    color: var(--color-1);
+.footer ul li a {
+    color: var(--color-2);
     text-decoration: none;
-    transition: 0.3s;
+    transition: color 0.3s ease;
+    font-size: 18px;
 }
 
-.footer-section a:hover {
-    color: var(--color-8);
+.footer ul li a:hover {
+    color: var(--text);
 }
 
-.social a {
-    color: var(--color-8);
-    margin-left: 0.6rem;
-    font-size: 1.2rem;
-    transition: 0.3s;
+.footer .icon a {
+    color: white;
+    text-decoration: none;
 }
 
-.social a:hover {
-    color: var(--color-9);
+.icon {
+    display: flex;
+    transition: all 0.3s ease;
 }
 
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 1rem;
-    font-size: 0.85rem;
+.icon i {
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+    /* adjust for your theme */
+    transition: transform 0.3s ease, color 0.3s ease;
 }
+
+.icon h3 {
+    opacity: 0;
+    transform: translateY(10px);
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.4s ease;
+}
+
+/* Hover Effects */
+.icon:hover h3 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.icon:hover i {
+    transform: scale(1.2);
+    color: var(--text);
+}
+
 
 /*=== Popup Modal ===*/
 .popup-modal {
@@ -263,14 +281,13 @@ footer h4 {
 }
 
 .popup-content {
-    background: var(--glass);
+    background: var(--color-3);
     backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
-    box-shadow: var(--card-shadow);
     max-width: 400px;
-    color: var(--color-4);
+    color: var(--text);
 }
 
 .popup-content h2 {
