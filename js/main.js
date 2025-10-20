@@ -14,7 +14,7 @@
 window.addEventListener('load', () => {
     setTimeout(() => {
         document.getElementById('popupModal').style.display = 'flex';
-    }, 3000);
+    }, 1000);
 });
 
 function closePopup() {
