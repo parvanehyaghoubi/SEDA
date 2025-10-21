@@ -1,18 +1,8 @@
-:root {
-    --color-1: #c3e2df;
-    --color-2: #ffffff;
-    --color-3: #eccbe1;
-    --color-4: #9d7d9d;
-    --color-5: #5a8897;
-    --color-6: #cddcdc;
-    --text: #393945;
-}
-
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Vazirmatn', sans-serif;
+    font-family: 'Vazirmatn';
     background: var(--color-2);
     min-height: 100vh;
     color: #000;
