@@ -492,10 +492,10 @@ h3 {
 }
 
 .icon i {
+    padding: 5px;
     font-size: 26px;
     color: #fff;
     cursor: pointer;
-    /* adjust for your theme */
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
