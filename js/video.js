@@ -108,6 +108,18 @@ searchInput.addEventListener('input', (e) => {
     showResults(found);
 });
 
+/* ---------- SEE MORE ---------- */
+if (seeMoreBtn) {
+    seeMoreBtn.addEventListener('click', () => {
+        const showing = seeMoreBtn.dataset.showing === 'all';
+        if (showing) {
+            renderLibrary(false);
+        } else {
+            window.location.href = 'library.html';
+        }
+    });
+}
+
 /* ---------- PLAY VIDEO ---------- */
 function playVideo(video) {
     // expand player and insert iframe
