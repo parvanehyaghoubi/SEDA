@@ -66,7 +66,7 @@ function renderLibrary(showAll = false) {
     libraryGrid.innerHTML = '';
     const items = showAll ? videoLibrary : videoLibrary.slice(0, 4);
     items.forEach(v => libraryGrid.appendChild(makeCard(v)));
-    seeMoreBtn.textContent = showAll ? 'Show less' : 'See more';
+    seeMoreBtn.textContent = showAll ? 'Show less' : 'مشاهده بیشتر';
     seeMoreBtn.dataset.showing = showAll ? 'all' : 'partial';
 }
 renderSuggested();
