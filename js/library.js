@@ -48,7 +48,7 @@ function makeCard(video) {
     </div>`;
     div.addEventListener('click', () => {
         localStorage.setItem('currentVideo', JSON.stringify(video));
-        window.location.href = 'seda video section.html';
+        window.location.href = 'video-section.html';
     });
     return div;
 }
