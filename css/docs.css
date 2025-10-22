@@ -65,7 +65,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* ==== Topbar (Mobile) ==== */
+/* Topbar (Mobile) */
 .topbar {
     display: none;
     width: 100%;
@@ -98,7 +98,7 @@ body {
     cursor: pointer;
 }
 
-/* ==== Sidebar ==== */
+/* Sidebar */
 .sidebar {
     width: 300px;
     background: var(--color-5);
@@ -194,7 +194,7 @@ body {
 }
 
 
-/* ==== Responsive ==== */
+/* Responsive */
 @media (max-width: 1000px) {
 
     .container {
@@ -434,7 +434,7 @@ body {
     color: var(--text);
 }
 
-/*LIBRARY FOOTER*/
+/* LIBRARY FOOTER */
 .footer-inner {
     padding: 10px;
     position: relative;

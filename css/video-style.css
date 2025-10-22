@@ -437,7 +437,7 @@ h3 {
     font-size: 0.95rem;
 }
 
-/* === Footer === */
+/* Footer */
 .footer {
     background: var(--color-5);
     color: white;
@@ -530,7 +530,7 @@ h3 {
 }
 
 
-/*LIBRARY FOOTER*/
+/* LIBRARY FOOTER */
 .footer-inner{
     position: relative;
     left: 0px;
@@ -549,7 +549,7 @@ h3 {
     margin: 0px;
 }
 
-/* RESPONSIVENESS CODE*/
+/* RESPONSIVENESS CODE */
 @media (max-width:1100px) {
     .player-wrapper.expanded {
         height: 450px

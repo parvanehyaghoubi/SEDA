@@ -74,7 +74,7 @@ body {
 
 /*Navbar End*/
 
-/*=== Hero Section ===*/
+/* Hero Section */
 
 .hero {
     max-width: 100%;
@@ -153,7 +153,7 @@ body {
     fill: #FFFFFF;
 }
 
-/** For tablet devices **/
+/* For tablet devices */
 @media (min-width: 768px) and (max-width: 1023px) {
     .custom-shape-divider-bottom-1760952885 svg {
         width: calc(133% + 1.3px);
@@ -161,7 +161,7 @@ body {
     }
 }
 
-/** For mobile devices **/
+/* For mobile devices */
 @media (max-width: 767px) {
     .custom-shape-divider-bottom-1760952885 svg {
         width: calc(190% + 1.3px);
@@ -169,7 +169,7 @@ body {
     }
 }
 
-/*=== Cards Section ===*/
+/* Cards Section */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -205,7 +205,7 @@ body {
     font-size: 0.9rem;
 }
 
-/*=== App Download Section ===*/
+/* App Download Section */
 .app-download {
     text-align: center;
     padding: 3rem 1rem;
@@ -231,7 +231,7 @@ body {
     color: var(--text);
 }
 
-/* === Footer === */
+/* Footer */
 .footer {
     background: var(--color-5);
     color: white;
@@ -321,7 +321,7 @@ body {
 }
 
 
-/*=== Popup Modal ===*/
+/* Popup Modal */
 .popup-modal {
     display: none;
     position: fixed;
@@ -403,7 +403,7 @@ body {
     }
 }
 
-/*=== Responsive ===*/
+/* Responsive */
 @media (max-width: 1200px) {
 
     .hero {
