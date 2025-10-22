@@ -157,10 +157,11 @@ form{
 }
 
 .toggle-panel .btn{
-    width: 160px;
-    height: 46px;
+    width: 140px;
+    height: fit-content;
     background: var(--color-1);
     box-shadow: none;
+    direction: rtl;
 }
 
 .toggle-panel .btn:hover{
@@ -229,10 +230,6 @@ form{
     .toggle-panel p{
         width: 100%;
         padding: 0vh;
-    }
-
-     .toggle-panel button{
-        padding: 10px;
     }
 
     .toggle-box.show .toggle-panel{
