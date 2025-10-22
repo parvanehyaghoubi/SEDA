@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="fa">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
-  
   <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/contact.css">
   <link rel="stylesheet" href="css/color.css">
   <title>Contact | Seda</title>
 </head>
+
 <body>
 
   <div class="container">
@@ -56,64 +58,62 @@
   </div>
 
   <script>
-  // Select elements
-  const formBox = document.querySelector('.form-box');
-  const container = document.querySelector('.container');
-  const toggleBox = document.querySelector('.toggle-box');
-  const form = document.querySelector('form');
-  const backBtn = document.querySelector('.back-btn');
-  const homeBtn = document.querySelector('.home-btn');
-  const panelButtons = document.querySelectorAll('.toggle-panel .btn');
+    // Select elements
+    const formBox = document.querySelector('.form-box');
+    const container = document.querySelector('.container');
+    const toggleBox = document.querySelector('.toggle-box');
+    const form = document.querySelector('form');
+    const backBtn = document.querySelector('.back-btn');
+    const homeBtn = document.querySelector('.home-btn');
+    const panelButtons = document.querySelectorAll('.toggle-panel .btn');
 
-  // Function to control button visibility on mobile
-  function updatePanelButtonsVisibility() {
-    const isMobile = window.innerWidth <= 650;
+    // Function to control button visibility on mobile
+    function updatePanelButtonsVisibility() {
+      const isMobile = window.innerWidth <= 650;
 
-    if (isMobile) {
-      // Hide buttons when toggle panel has short height (before submit)
-      if (!toggleBox.classList.contains('show')) {
-        panelButtons.forEach(btn => btn.style.display = 'none');
+      if (isMobile) {
+        // Hide buttons when toggle panel has short height (before submit)
+        if (!toggleBox.classList.contains('show')) {
+          panelButtons.forEach(btn => btn.style.display = 'none');
+        } else {
+          panelButtons.forEach(btn => btn.style.display = 'inline-flex');
+        }
       } else {
+        // Always show on desktop
         panelButtons.forEach(btn => btn.style.display = 'inline-flex');
       }
-    } else {
-      // Always show on desktop
-      panelButtons.forEach(btn => btn.style.display = 'inline-flex');
     }
-  }
 
-  // When form is submitted
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    formBox.classList.add('hide');
-    container.classList.add('active');
-    toggleBox.classList.add('show');
-    backBtn.classList.remove('d-none');
-    updatePanelButtonsVisibility(); // Show buttons after toggle expands
-  });
+    // When form is submitted
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formBox.classList.add('hide');
+      container.classList.add('active');
+      toggleBox.classList.add('show');
+      backBtn.classList.remove('d-none');
+      updatePanelButtonsVisibility(); // Show buttons after toggle expands
+    });
 
-  // When backBtn is clicked
-  backBtn.addEventListener('click', () => {
-    backBtn.classList.add('d-none');
-    formBox.classList.remove('hide');
-    container.classList.remove('active');
-    toggleBox.classList.remove('show');
-    form.reset();
-    updatePanelButtonsVisibility(); // Hide buttons when back to short height
-  });
+    // When backBtn is clicked
+    backBtn.addEventListener('click', () => {
+      backBtn.classList.add('d-none');
+      formBox.classList.remove('hide');
+      container.classList.remove('active');
+      toggleBox.classList.remove('show');
+      form.reset();
+      updatePanelButtonsVisibility(); // Hide buttons when back to short height
+    });
 
-  // When home button is clicked
-  homeBtn.addEventListener('click', () => {
-    window.location.href = 'index.html';
-  });
+    // When home button is clicked
+    homeBtn.addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
 
-  // On page load & resize
-  window.addEventListener('resize', updatePanelButtonsVisibility);
-  window.addEventListener('load', updatePanelButtonsVisibility);
-</script>
+    // On page load & resize
+    window.addEventListener('resize', updatePanelButtonsVisibility);
+    window.addEventListener('load', updatePanelButtonsVisibility);
+  </script>
 
 </body>
+
 </html>
-
-
-
