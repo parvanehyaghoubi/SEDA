@@ -438,7 +438,7 @@ body {
     .hero {
         flex-direction: column;
         max-width: 100%;
-        padding: 15vh 10vh;
+        padding: 17vh 10vh;
     }
 
     .hero-content {
