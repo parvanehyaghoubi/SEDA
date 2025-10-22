@@ -1,4 +1,3 @@
- /* Load videos from localStorage */
 
     function saveVideo(videos) {
     localStorage.setItem('videoLibrary', JSON.stringify(videos));
