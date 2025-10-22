@@ -1,4 +1,4 @@
-import { loadVideo, saveVideo } from './localStorage.js';
+import { loadVideo, saveVideo } from '.js/localStorage.js';
 /* --- DATA ----*/
 let videoLibrary = loadVideo();
 if (videoLibrary.length === 0) {
