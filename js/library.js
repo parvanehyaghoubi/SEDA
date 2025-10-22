@@ -1,7 +1,3 @@
-
-    function saveVideo(videos) {
-    localStorage.setItem('videoLibrary', JSON.stringify(videos));
-}
     let videoLibrary = JSON.parse(localStorage.getItem('videoLibrary') || '[]');
 
     const navAdd = document.getElementById('nav-add');
