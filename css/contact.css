@@ -189,7 +189,7 @@ form{
     transition: width 0.8s ease;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
     .container{
         height: calc(100vh - 40px);
     }
@@ -221,9 +221,18 @@ form{
         padding: 10vh;
     }
 
+    .toggle-panel h1{
+        width: 100%;
+        text-align: center;
+        padding: 4vh;
+    }
     .toggle-panel p{
         width: 100%;
         padding: 0vh;
+    }
+
+     .toggle-panel button{
+        padding: 10px;
     }
 
     .toggle-box.show .toggle-panel{
