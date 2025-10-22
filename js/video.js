@@ -12,7 +12,7 @@ if (videoLibrary.length === 0) {
     saveVideo(videoLibrary);
 }
 
-        /* ----------DOM ---------- */
+/* ----------DOM ---------- */
 const searchInput = document.getElementById('searchInput');
 const resultsGrid = document.getElementById('resultsGrid');
 const playerWrapper = document.getElementById('playerWrapper');
@@ -25,6 +25,7 @@ const seeMoreBtn = document.getElementById('seeMoreBtn');
 
 
 /* ---------- AUTO PLAY if selected from library ---------- */
+
 // Check if a video was clicked from the library
 const savedVideo = localStorage.getItem('currentVideo');
 if (savedVideo) {

@@ -1,4 +1,4 @@
-// localStorage.js
+// localStorage
 export function loadVideo() {
 try {
     return JSON.parse(localStorage.getItem('videoLibrary')) || [];

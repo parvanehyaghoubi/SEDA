@@ -10,7 +10,7 @@
 //     }
 // });
 
-// Popup after 3 seconds
+// Popup after 1 second
 window.addEventListener('load', () => {
     setTimeout(() => {
         document.getElementById('popupModal').style.display = 'flex';
