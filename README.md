@@ -3,7 +3,7 @@ SEDA
 </h1>
 
 <p align="center">
-  <img src="https://github.com/parvanehyaghoubi/SEDA/blob/main/assets/seda-lg.png" alt="seda logo" width="120"/>
+  <img src="https://github.com/parvanehyaghoubi/SEDA/blob/main/assets/favicon.png" alt="seda logo" width="120"/>
 </p>
 
 ---
